@@ -1,7 +1,7 @@
 class Hourse:
-    def __init__(self, x_distance: int = 0, y_distance: int = 0, sound: str = 'Frrr'):
+    def __init__(self, x_distance: int = 0,  sound: str = 'Frrr'):
         self.x_distance = x_distance
-        super().__init__(y_distance, sound)
+        super().__init__()
 
     def run(self, dx: int) -> int:
         self.x_distance += dx
@@ -19,8 +19,8 @@ class Eagle:
 
 
 class Pegasus(Hourse, Eagle):
-    def __init__(self, x_distance: int = 0, y_distance: int = 0, sound: str = 'I train, eat, sleep, and repeat'):
-        super().__init__(x_distance, y_distance, sound)
+    def __init__(self):
+        super().__init__()
 
     def move(self, dx: int, dy: int) -> tuple[int, int]:
         return self.run(dx), self.fly(dy)
